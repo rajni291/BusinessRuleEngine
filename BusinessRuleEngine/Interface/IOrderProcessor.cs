@@ -1,13 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using BusinessRuleEngine.Model;
+
 
 namespace BusinessRuleEngine.Interface
 {
     public interface IOrderProcessor
     {
-       string ProcessOrder();
+       string ProcessOrder(Product product);
     }
 }

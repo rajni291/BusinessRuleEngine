@@ -46,9 +46,12 @@
     <Compile Include="Factory\BookProcessingFactory.cs" />
     <Compile Include="Factory\OrderProcessingFactory.cs" />
     <Compile Include="Factory\PhysicalProductProcessingFactory.cs" />
+    <Compile Include="Factory\VideoProcessingFactory.cs" />
     <Compile Include="Implementation\BookProcessor.cs" />
     <Compile Include="Implementation\PhysicalProductProcessor.cs" />
+    <Compile Include="Implementation\VideoProcessor.cs" />
     <Compile Include="Interface\IOrderProcessor.cs" />
+    <Compile Include="Model\Product.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

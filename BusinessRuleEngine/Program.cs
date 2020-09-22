@@ -1,5 +1,6 @@
 ﻿using BusinessRuleEngine.Factory;
 using BusinessRuleEngine.Interface;
+using BusinessRuleEngine.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,7 +16,12 @@ namespace BusinessRuleEngine
             IOrderProcessor bookOrder = new BookProcessingFactory().CreateOrder();
             if(bookOrder != null)
             {
-                Console.WriteLine("Order Status:" + bookOrder.ProcessOrder());
+                var order = new Product
+                {
+                    Type = "Book",
+                    Name = "Book1"
+                };
+                Console.WriteLine("Order Status:" + bookOrder.ProcessOrder(order));
             }
             else
             {
@@ -25,7 +31,12 @@ namespace BusinessRuleEngine
             IOrderProcessor Productorder = new PhysicalProductProcessingFactory().CreateOrder();
             if (Productorder != null)
             {
-                Console.WriteLine("Order Status:" + Productorder.ProcessOrder());
+                var order = new Product
+                {
+                    Type = "Physical Product",
+                    Name = "Physical Product"
+                };
+                Console.WriteLine("Order Status:" + Productorder.ProcessOrder(order));
             }
             else
             {
