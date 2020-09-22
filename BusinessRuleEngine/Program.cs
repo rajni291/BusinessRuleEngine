@@ -12,10 +12,20 @@ namespace BusinessRuleEngine
     {
         static void Main(string[] args)
         {
-            IOrderProcessor order = new BookProcessingFactory().CreateOrder();
-            if(order != null)
+            IOrderProcessor bookOrder = new BookProcessingFactory().CreateOrder();
+            if(bookOrder != null)
             {
-                Console.WriteLine("Order Status:" + order.ProcessOrder());
+                Console.WriteLine("Order Status:" + bookOrder.ProcessOrder());
+            }
+            else
+            {
+                Console.WriteLine("Invalid Order");
+            }
+            Console.WriteLine("-------------");
+            IOrderProcessor Productorder = new PhysicalProductProcessingFactory().CreateOrder();
+            if (Productorder != null)
+            {
+                Console.WriteLine("Order Status:" + Productorder.ProcessOrder());
             }
             else
             {

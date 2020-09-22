@@ -3,11 +3,11 @@ using BusinessRuleEngine.Interface;
 
 namespace BusinessRuleEngine.Factory
 {
-    public class BookProcessingFactory: OrderProcessingFactory
+    public class PhysicalProductProcessingFactory : OrderProcessingFactory
     {
         protected override IOrderProcessor GetOrderType()
         {
-            IOrderProcessor order = new BookProcessor();
+            IOrderProcessor order = new PhysicalProductProcessor();
             return order;
         }
     }
