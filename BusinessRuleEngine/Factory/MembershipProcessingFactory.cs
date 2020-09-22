@@ -1,12 +1,13 @@
 ﻿using BusinessRuleEngine.Implementation;
 using BusinessRuleEngine.Interface;
+
 namespace BusinessRuleEngine.Factory
 {
-    public class VideoProcessingFactory : OrderProcessingFactory
+    public class MembershipProcessingFactory : OrderProcessingFactory
     {
         protected override IOrderProcessor GetOrderType()
         {
-            IOrderProcessor order = new VideoProcessor();
+            IOrderProcessor order = new MembershipProcessor();
             return order;
         }
     }

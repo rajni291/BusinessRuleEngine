@@ -11,7 +11,7 @@ namespace BusinessRuleEngine.Implementation
             bool packageSlipDone = this.GeneratePackingSlipForShipping();
             if (packageSlipDone)
                 result = this.GenerateComission();
-            return result ? "Book Order processed for: " + product.Name : "some error";
+            return result ? "PhysicalProduct Order processed for: " + product.Name : "some error";
         }
 
         // this will be moved to common code later

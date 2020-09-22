@@ -7,17 +7,23 @@ namespace BusinessRuleEngine.Implementation
     {
         public string ProcessOrder(Product product)
         {
-            bool result = false;
-            bool packageSlipDone = this.GeneratePackingSlipForShipping();
-            if (packageSlipDone)
-                result = this.GeneratePackingSlipForShipping();
-            return result ? "Physical Product Order processed" : "some error";
+            bool packageSlipDone = this.GeneratePackingSlipForShipping(product);
+            return packageSlipDone ? "Video Order processed for: " + product.Name : "some error";
         }
 
         // this will be moved to common code later
-        private bool GeneratePackingSlipForShipping()
+        private bool GeneratePackingSlipForShipping(Product product )
         {
-            //some logic
+            if(product.Name == "Learning to Ski")
+            {
+                var FirstAidProduct = new Product
+                {
+                    Type = "Video",
+                    Name = "First Aid"
+                };
+                this.GeneratePackingSlipForShipping(FirstAidProduct);
+
+            }
             return true;
         }
 

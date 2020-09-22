@@ -10,5 +10,7 @@ namespace BusinessRuleEngine.Model
     {
         public string Type { get; set; }
         public string Name { get; set; }
+
+        public string action { get; set; }
     }
 }

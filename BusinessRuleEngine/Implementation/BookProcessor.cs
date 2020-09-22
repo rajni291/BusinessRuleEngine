@@ -13,7 +13,7 @@ namespace BusinessRuleEngine.Implementation
             if (packageSlipDone)
                 result = this.GenerateComission();
             return result ? "Book Order processed for: " + product.Name : "some error";
-        }
+        }   
 
         // this will be moved to common code later
         private bool GeneratePackingSlipForRoyalityDept()
