@@ -14,6 +14,8 @@ namespace BusinessRuleEngine.Implementation
         // this will be moved to common code later
         private bool GeneratePackingSlipForShipping(Product product )
         {
+            if (product.Name == null)
+                return false;
             if(product.Name == "Learning to Ski")
             {
                 var FirstAidProduct = new Product
